@@ -19,8 +19,6 @@ const navItems = [
   { name: "Courses", link: "/courses" },
   { name: "Consultancy", link: "/consultancy" },
   { name: "Safeguarding", link: "/safeguarding" },
-  { name: "Support Us", link: "/support-us" },
-  { name: "Contact", link: "/contact" },
 ]
 
 export const AppNavbar = () => {
@@ -32,7 +30,7 @@ export const AppNavbar = () => {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="hidden items-center gap-2 2xl:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             <NavbarButton href="/support-us" variant="secondary">
               Support Us
             </NavbarButton>

@@ -20,7 +20,7 @@ const FlipCard = ({ item }: { item: FlipCardItem }) => {
   const [flipped, setFlipped] = useState(false)
   return (
     <div
-      className="group relative h-56 cursor-pointer"
+      className="group relative min-h-[15rem] h-64 cursor-pointer sm:h-[17rem]"
       style={{ perspective: 900 }}
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
@@ -68,10 +68,10 @@ export const FlipCardGrid = ({ heading, items }: FlipCardGridProps) => {
       >
         {heading}
       </motion.h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item, index) => (
           <motion.div
-            key={index}
+            key={item.title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}

@@ -139,19 +139,19 @@ const AboutPage = () => {
       <QuoteBand
         quotes={[
           {
-            text: "Al-Hikmah gave my daughter not just an education, but a sense of identity, community, and purpose she carries everywhere.",
-            author: "Aisha R.",
-            role: "Parent, Birmingham",
+            text: "Excellent tuition by expert tutors.",
+            author: "Parent",
+            role: "Review, al-hikmah.org.uk",
           },
           {
-            text: "The team genuinely cares. The safeguarding is thorough, the teaching is exceptional, and the community feel is unmatched.",
-            author: "Ibrahim K.",
-            role: "Parent, West Midlands",
+            text: "I have learnt so much in such a short time.",
+            author: "Student",
+            role: "Review, al-hikmah.org.uk",
           },
           {
-            text: "Our children come home inspired — not just about what they learned, but about who they are becoming.",
-            author: "Fatima M.",
-            role: "Parent and Community Member",
+            text: "I have been really impressed by the team; they are dedicated and have made a massive difference to my son's attainment.",
+            author: "Parent",
+            role: "Review, al-hikmah.org.uk",
           },
         ]}
       />

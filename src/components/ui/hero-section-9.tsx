@@ -19,7 +19,7 @@ interface ActionProps {
 
 interface HeroSectionProps {
   title: React.ReactNode
-  subtitle: string
+  subtitle: React.ReactNode
   actions: ActionProps[]
   stats: StatProps[]
   images: string[]
@@ -75,9 +75,12 @@ const HeroSection = ({ title, subtitle, actions, stats, images, className }: Her
           >
             {title}
           </motion.h1>
-          <motion.p className="mt-6 max-w-md text-lg text-brand-700" variants={itemVariants}>
+          <motion.div
+            className="mt-6 max-w-xl text-lg text-brand-700 [&_ul]:mt-3 [&_ul]:space-y-2 [&_ul]:pl-5 [&_ul]:text-left [&_ul]:marker:text-brand-600"
+            variants={itemVariants}
+          >
             {subtitle}
-          </motion.p>
+          </motion.div>
           <motion.div
             className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start"
             variants={itemVariants}

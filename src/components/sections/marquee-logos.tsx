@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
 
-interface MarqueeItem {
-  label: string
+export interface MarqueeItem {
+  label: ReactNode
   icon: ReactNode
 }
 
@@ -39,7 +39,7 @@ export const MarqueeLogos = ({ heading, items }: MarqueeLogosProps) => {
               className="flex items-center gap-2 rounded-full border border-brand-200 bg-white px-5 py-2.5 shadow-sm"
             >
               <span className="flex h-4 w-4 items-center justify-center text-brand-700">{item.icon}</span>
-              <span className="whitespace-nowrap text-sm font-semibold text-brand-800">{item.label}</span>
+              <span className="text-center text-sm font-semibold leading-snug text-brand-800">{item.label}</span>
             </div>
           ))}
         </motion.div>

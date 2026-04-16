@@ -4,21 +4,19 @@ import {
   Trophy,
   BookMarked,
   BarChart2,
-  Shield,
-  HeartHandshake,
   GraduationCap,
   Users,
   ClipboardList,
   Globe,
+  Languages,
+  Tent,
   Moon,
-  BookOpen,
-  PenLine,
-  Dumbbell,
   Palette,
-  Heart,
+  Scale,
+  Sparkles,
   CheckCircle2,
-  Feather,
   Rocket,
+  Landmark,
   MapPin,
   ArrowRight,
 } from "lucide-react"
@@ -44,18 +42,31 @@ const HomePage = () => {
       <MarqueeLogos
         heading="What we offer at Al-Hikmah"
         items={[
-          { label: "Full-Time Academy", icon: <School className="h-4 w-4" /> },
-          { label: "Enrichment & Sport", icon: <Trophy className="h-4 w-4" /> },
-          { label: "Arabic Language", icon: <Moon className="h-4 w-4" /> },
-          { label: "Islamic Studies", icon: <BookMarked className="h-4 w-4" /> },
-          { label: "Urdu Language", icon: <PenLine className="h-4 w-4" /> },
-          { label: "English Skills", icon: <BookOpen className="h-4 w-4" /> },
-          { label: "School Consultancy", icon: <BarChart2 className="h-4 w-4" /> },
-          { label: "Safeguarding Support", icon: <Shield className="h-4 w-4" /> },
-          { label: "Outdoor Residentials", icon: <Dumbbell className="h-4 w-4" /> },
-          { label: "Arts & Creativity", icon: <Palette className="h-4 w-4" /> },
-          { label: "Parent Literacy", icon: <Users className="h-4 w-4" /> },
-          { label: "Community Events", icon: <Globe className="h-4 w-4" /> },
+          {
+            label: (
+              <>
+                Academic
+                <br />
+                pathways
+              </>
+            ),
+            icon: <GraduationCap className="h-4 w-4" />,
+          },
+          { label: "GCSE courses", icon: <ClipboardList className="h-4 w-4" /> },
+          { label: "Languages", icon: <Languages className="h-4 w-4" /> },
+          { label: "Consultancy", icon: <BarChart2 className="h-4 w-4" /> },
+          { label: "Enrichment", icon: <Trophy className="h-4 w-4" /> },
+          { label: "Residentials", icon: <Tent className="h-4 w-4" /> },
+          {
+            label: (
+              <>
+                Arts and
+                <br />
+                Crafts
+              </>
+            ),
+            icon: <Palette className="h-4 w-4" />,
+          },
         ]}
       />
 
@@ -68,96 +79,86 @@ const HomePage = () => {
           transition={{ duration: 0.4 }}
           className="mb-8"
         >
-          <h2 className="text-2xl font-bold text-brand-900 sm:text-3xl">Everything Al-Hikmah offers</h2>
+          <h2 className="text-2xl font-bold text-brand-900 sm:text-3xl">Our Offer</h2>
           <p className="mt-2 max-w-2xl text-brand-600">
             A complete ecosystem of education, enrichment, and community support — all in one place.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
           {[
             {
               route: "/academy",
               icon: <School className="h-6 w-6" />,
-              tag: "Ages 5–16",
+              tag: "KS3–KS5",
               title: "Academy",
-              description: "A full-time, faith-enriched academy curriculum aligned with the national framework — combining academic rigour with Islamic values.",
+              description:
+                "Al-Hikmah Academy provides high-quality weekday tuition for students in KS3–KS5, delivered in a focused, supportive learning environment. Our small class sizes, subject-specialist teaching, and values-driven approach ensure strong academic progress, character development, and preparation for future pathways. We also offer expert support for home-educating families, including curriculum planning, assessment guidance, and personalised advice to help parents feel confident and fully equipped in their educational choices.",
               image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&auto=format&fit=crop&q=80",
-            },
-            {
-              route: "/enrichment",
-              icon: <Trophy className="h-6 w-6" />,
-              tag: "All Ages",
-              title: "Enrichment & Community",
-              description: "Sport, outdoor residentials, arts, and community events that build confidence, identity, and lifelong friendships.",
-              image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&auto=format&fit=crop&q=80",
             },
             {
               route: "/courses",
               icon: <BookMarked className="h-6 w-6" />,
-              tag: "All Levels",
-              title: "Language & Islamic Courses",
-              description: "Arabic, Urdu, English Skills, Islamic Studies, and Professional Development courses for every age and level.",
+              tag: "Online",
+              title: "Courses",
+              description:
+                "Our growing range of online courses is designed to foster curiosity, independence, and lifelong learning. These flexible programmes support learners of all ages and promote continuous personal and academic development.",
               image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=900&auto=format&fit=crop&q=80",
+            },
+            {
+              route: "/enrichment",
+              icon: <Trophy className="h-6 w-6" />,
+              tag: "Community",
+              title: "Enrichment",
+              description:
+                "We deliver a diverse programme of enrichment activities that bring families and communities together. From creative workshops to youth development initiatives, our enrichment offer promotes wellbeing, confidence, and meaningful community engagement.",
+              image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&auto=format&fit=crop&q=80",
             },
             {
               route: "/consultancy",
               icon: <BarChart2 className="h-6 w-6" />,
-              tag: "For Schools",
+              tag: "Schools & organisations",
               title: "Consultancy",
-              description: "Curriculum mapping, assessment frameworks, and school improvement support for Islamic schools and academies across the UK.",
+              description:
+                "Al-Hikmah provides tailored consultancy services for schools, community organisations, and educational establishments. We support institutions with strategic planning, curriculum development, staff training, and bespoke solutions to enhance educational quality and outcomes.",
               image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&auto=format&fit=crop&q=80",
-            },
-            {
-              route: "/safeguarding",
-              icon: <Shield className="h-6 w-6" />,
-              tag: "Statutory",
-              title: "Safeguarding",
-              description: "Our safeguarding framework exceeds UK requirements — DBS-checked staff, GDPR compliance, and a dedicated DSL.",
-              image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&auto=format&fit=crop&q=80",
-            },
-            {
-              route: "/support-us",
-              icon: <HeartHandshake className="h-6 w-6" />,
-              tag: "Community",
-              title: "Support & Give",
-              description: "Volunteer, donate, or partner with Al-Hikmah to expand our reach and impact for young Muslims across Birmingham.",
-              image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&auto=format&fit=crop&q=80",
             },
           ].map((item, index) => (
             <motion.button
               key={item.route}
+              type="button"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4, delay: index * 0.07 }}
-              whileHover={{ y: -4 }}
               onClick={() => navigate(item.route)}
-              className="group relative overflow-hidden rounded-2xl text-left"
-              style={{ height: 280 }}
+              className="group flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-brand-200/90 bg-gradient-to-b from-white to-brand-50/40 text-left shadow-md ring-1 ring-brand-200/40 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg hover:ring-brand-300/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
               aria-label={`Go to ${item.title}`}
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-sm">
-                    {item.tag}
-                  </span>
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition group-hover:bg-white group-hover:text-brand-700">
-                    {item.icon}
-                  </div>
+              <div className="relative h-44 w-full shrink-0 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={`${item.title} — Al-Hikmah`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-900/25 to-transparent" />
+                <div className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/95 text-brand-700 shadow-md backdrop-blur-sm transition duration-300 group-hover:border-brand-200 group-hover:bg-brand-700 group-hover:text-white">
+                  {item.icon}
                 </div>
-                <div>
-                  <div className="flex items-center gap-1.5">
-                    <h3 className="text-lg font-black text-white">{item.title}</h3>
-                    <ArrowRight className="h-4 w-4 text-white/60 transition-transform group-hover:translate-x-1 group-hover:text-white" />
-                  </div>
-                  <p className="mt-1 text-xs leading-relaxed text-white/80">{item.description}</p>
+              </div>
+              <div className="flex min-h-0 flex-1 flex-col p-6">
+                <span className="w-fit rounded-full border border-brand-200/80 bg-brand-100/90 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-800">
+                  {item.tag}
+                </span>
+                <div className="mt-4 flex items-center gap-2 border-b border-brand-200/60 pb-3">
+                  <h3 className="font-serif text-xl font-semibold tracking-tight text-brand-900">{item.title}</h3>
+                  <ArrowRight
+                    className="h-4 w-4 shrink-0 translate-y-px text-brand-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-700"
+                    aria-hidden
+                  />
+                </div>
+                <div className="mt-3 min-h-[17rem] max-h-[17rem] flex-1 overflow-y-auto overscroll-y-contain pr-1 [scrollbar-color:rgba(155,28,44,0.35)_transparent] [scrollbar-width:thin]">
+                  <p className="text-[0.8125rem] leading-[1.7] text-brand-800/95 sm:text-sm">{item.description}</p>
                 </div>
               </div>
             </motion.button>
@@ -170,56 +171,56 @@ const HomePage = () => {
         subheading="Numbers that reflect years of commitment to community education and learner growth."
         dark
         items={[
-          { label: "Learners Supported", value: 500, suffix: "+", description: "Across all programmes since founding", icon: <GraduationCap className="h-6 w-6" /> },
-          { label: "Years of Service", value: 14, suffix: "+", description: "Serving the West Midlands community", icon: <MapPin className="h-6 w-6" /> },
-          { label: "Active Programmes", value: 12, suffix: "", description: "Running every term across all areas", icon: <ClipboardList className="h-6 w-6" /> },
-          { label: "Community Partners", value: 30, suffix: "+", description: "Schools, charities, and organisations", icon: <Globe className="h-6 w-6" /> },
+          { label: "Learners Supported", value: 250, suffix: "+", description: "Across all programmes since founding", icon: <GraduationCap className="h-6 w-6" /> },
+          { label: "Years of Service", value: 5, suffix: "+", description: "Serving the West Midlands community", icon: <MapPin className="h-6 w-6" /> },
+          { label: "Active Programmes", value: 10, suffix: "", description: "Running every term across all areas", icon: <ClipboardList className="h-6 w-6" /> },
+          { label: "Community Partners", value: 15, suffix: "+", description: "Schools, charities, and organisations", icon: <Globe className="h-6 w-6" /> },
         ]}
       />
 
       <FlipCardGrid
-        heading="The HIKMAH Difference"
+        heading="Al-Hikmah Values"
         items={[
           {
-            title: "Honesty",
-            icon: <Heart className="h-6 w-6" />,
-            front: "Transparent relationships at every level — with learners, families, and partners.",
-            back: "Open communication, honest feedback, and visible accountability underpin everything we do. No ambiguity, no hidden agendas.",
+            title: "H — Honesty",
+            icon: <Scale className="h-6 w-6" />,
+            front: "Integrity, sincerity, and ethical conduct in how we work with every learner and partner.",
+            back: "We uphold the highest standards of integrity, sincerity, and ethical conduct in all aspects of our work.",
             accent: "linear-gradient(135deg, #7e1625 0%, #a0202f 100%)",
           },
           {
-            title: "Ilm (Knowledge)",
-            icon: <BookMarked className="h-6 w-6" />,
-            front: "Purposeful learning driven by curiosity, scholarship, and spiritual grounding.",
-            back: "Islamic scholarly tradition meets contemporary learning science — giving learners frameworks for lifelong academic and spiritual growth.",
+            title: "I — Inspiration",
+            icon: <Sparkles className="h-6 w-6" />,
+            front: "Curiosity, ambition, and a lifelong commitment to learning and excellence.",
+            back: "We inspire curiosity, ambition, and a lifelong commitment to learning, encouraging every individual to strive for excellence.",
             accent: "linear-gradient(135deg, #5f121d 0%, #7e1625 100%)",
           },
           {
-            title: "Kindness",
-            icon: <Heart className="h-6 w-6" />,
-            front: "Every learner is treated with dignity, patience, and genuine compassion.",
-            back: "Trauma-aware, pastoral practice ensures no learner feels invisible, unsupported, or out of place in our learning community.",
+            title: "K — Knowledge (ʿIlm)",
+            icon: <BookMarked className="h-6 w-6" />,
+            front: "A love of learning rooted in curiosity, reflection, and growth for every learner.",
+            back: "We cultivate a love of learning rooted in curiosity, reflection, and growth, ensuring every learner gains the knowledge and understanding they need to thrive.",
             accent: "linear-gradient(135deg, #b8860b 0%, #d4a017 100%)",
           },
           {
-            title: "Motivation",
+            title: "M — Motivation",
             icon: <Rocket className="h-6 w-6" />,
-            front: "Ambition guided by purpose, community aspiration, and Islamic values.",
-            back: "High expectations paired with the right support scaffolding — so every learner can reach and exceed their personal potential.",
+            front: "Ambition, resilience, and self-belief so learners persevere and reach their goals.",
+            back: "We promote ambition, resilience, and self-belief, empowering learners to persevere and achieve their goals.",
             accent: "linear-gradient(135deg, #7e1625 0%, #b8860b 100%)",
           },
           {
-            title: "Accountability",
+            title: "A — Accountability",
             icon: <CheckCircle2 className="h-6 w-6" />,
-            front: "Staff and learners own their growth and openly acknowledge their challenges.",
-            back: "Regular reviews, transparent checkpoints, and shared responsibility drive continuous improvement at every level of our organisation.",
+            front: "Clear ownership of actions, decisions, and outcomes — with a drive to keep improving.",
+            back: "We take responsibility for our actions, decisions, and outcomes, maintaining a commitment to continuous improvement and high standards.",
             accent: "linear-gradient(135deg, #5f121d 0%, #a0202f 100%)",
           },
           {
-            title: "Harmony",
-            icon: <Feather className="h-6 w-6" />,
-            front: "A community where all backgrounds, abilities, and identities genuinely belong.",
-            back: "Inclusive practice, cultural cohesion, and respectful dialogue make Al-Hikmah a space where every person feels welcome and valued.",
+            title: "H — Heritage",
+            icon: <Landmark className="h-6 w-6" />,
+            front: "Honouring Islamic and cultural tradition as a living foundation for who we become.",
+            back: "We honour our Islamic and cultural heritage, drawing on timeless scholarship and community tradition so learners grow with strong identity, dignity, and continuity across generations.",
             accent: "linear-gradient(135deg, #4a5568 0%, #7e1625 100%)",
           },
         ]}
@@ -271,24 +272,19 @@ const HomePage = () => {
       <QuoteBand
         quotes={[
           {
-            text: "Al-Hikmah gave my daughter not just an education, but a sense of identity, community, and purpose she carries everywhere she goes.",
-            author: "Aisha R.",
-            role: "Parent, Birmingham",
+            text: "Excellent tuition by expert tutors.",
+            author: "Parent",
+            role: "Review, al-hikmah.org.uk",
           },
           {
-            text: "The curriculum review Al-Hikmah delivered was the most practical and actionable school improvement work we've received in five years.",
-            author: "Head Teacher",
-            role: "Islamic Primary School, Birmingham",
+            text: "I have learnt so much in such a short time.",
+            author: "Student",
+            role: "Review, al-hikmah.org.uk",
           },
           {
-            text: "Volunteering with Al-Hikmah has been the most rewarding thing I've done outside of my career. Seeing the children grow is priceless.",
-            author: "Yusuf A.",
-            role: "Volunteer Arabic Teacher",
-          },
-          {
-            text: "Our children come home inspired — not just about what they learned, but who they're becoming as young Muslims.",
-            author: "Ibrahim K.",
-            role: "Parent, West Midlands",
+            text: "I have been really impressed by the team; they are dedicated and have made a massive difference to my son's attainment.",
+            author: "Parent",
+            role: "Review, al-hikmah.org.uk",
           },
         ]}
       />

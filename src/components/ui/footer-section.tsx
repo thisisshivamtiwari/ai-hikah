@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import {
+  ExternalLink,
   Facebook,
   Instagram,
   Linkedin,
@@ -71,9 +72,51 @@ function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-semibold text-brand-900">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic text-brand-700">
-              <p>Birmingham, West Midlands</p>
-              <p>Phone: 0121 987 6543</p>
-              <p>Email: info@alhikmah.org.uk</p>
+              <p>
+                Bisley Works, Golden Hillock Road
+                <br />
+                Sparkbrook, Birmingham B11 2PY, UK
+              </p>
+              <p>
+                Phone:{" "}
+                <a
+                  href="tel:+447846642499"
+                  className="font-medium text-brand-900 underline-offset-2 hover:text-brand-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                >
+                  07846 642 499
+                </a>
+              </p>
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:admin@al-hikmah.org.uk"
+                  className="font-medium text-brand-900 underline-offset-2 hover:text-brand-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm break-all"
+                >
+                  admin@al-hikmah.org.uk
+                </a>
+              </p>
+              <p className="pt-1">
+                <a
+                  href="https://www.al-hikmah.org.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-brand-900 underline-offset-2 hover:text-brand-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                >
+                  al-hikmah.org.uk
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://share.google/FDAsPJi7EioLAG45R"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-brand-900 underline-offset-2 hover:text-brand-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                >
+                  Google Business Profile
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </a>
+              </p>
             </address>
             <Button
               type="button"
@@ -150,7 +193,9 @@ function Footerdemo() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-200/80 pt-8 text-center md:flex-row">
-          <p className="text-sm text-brand-700">© 2024 Al-Hikmah. All rights reserved.</p>
+          <p className="text-sm text-brand-700">
+            © {new Date().getFullYear()} Al-Hikmah Education Services. All rights reserved.
+          </p>
           <nav className="flex gap-4 text-sm">
             <a href="/home#safeguarding" className="transition-colors hover:text-brand-700">
               Privacy Policy

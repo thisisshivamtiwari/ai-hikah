@@ -118,7 +118,6 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
     "Enrichment",
     "Courses",
     "Consultancy",
-    "Contact",
   ])
   const displayedItems = visible
     ? items.filter((item) => compactMenuItemNames.has(item.name))

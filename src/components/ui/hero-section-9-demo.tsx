@@ -10,11 +10,22 @@ const HeroSectionDemo = () => {
   const heroData = {
     title: (
       <>
-        Inspire hearts, educate minds, <br /> and empower lives
+        Raising aspiration, <br />
+        fulfilling potential and <br />
+        11+ Age pathways
       </>
     ),
-    subtitle:
-      "Al-Hikmah provides holistic and inclusive learning through academy pathways, enrichment programmes, courses, and expert consultancy support.",
+    subtitle: (
+      <>
+        <p className="font-semibold text-brand-900">Al-Hikmah provides:</p>
+        <ul className="list-disc">
+          <li>Expert advice and support for parents choosing to home-school their children</li>
+          <li>High-quality weekday tuition for students in KS3–KS5</li>
+          <li>A range of online courses designed to foster lifelong learning</li>
+          <li>Enrichment activities and programmes for the local community</li>
+        </ul>
+      </>
+    ),
     actions: [
       {
         text: "Explore Academy",
@@ -29,13 +40,13 @@ const HeroSectionDemo = () => {
     ],
     stats: [
       {
-        value: "5-16",
+        value: "11+",
         label: "Age pathways",
         icon: <Users className="h-5 w-5 text-brand-700" />,
       },
       {
         value: "DBS",
-        label: "Checked team",
+        label: "Fully compliant",
         icon: <Briefcase className="h-5 w-5 text-brand-700" />,
       },
       {

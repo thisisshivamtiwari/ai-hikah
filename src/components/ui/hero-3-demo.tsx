@@ -17,9 +17,9 @@ const AnimatedHeroDemo = () => {
       tagline="Community-rooted and values-driven education"
       title={
         <>
-          Learn with Purpose,
+          Learn with purpose,
           <br />
-          Grow with Confidence
+          grow with confidence
         </>
       }
       description="From home education and enrichment to faith, language, and compliance courses, Al-Hikmah helps learners and organisations thrive with support that is practical, inclusive, and impactful."
